@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islami/core/utils/app_colors.dart';
+import 'package:islami/feature/home/home_screen.dart';
 import 'package:islami/feature/splash/splash_screen.dart';
 
 void main() {
@@ -10,6 +12,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
+    return MaterialApp(
+      theme: ThemeData(canvasColor: AppColors.gold),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+    );
   }
 }
