@@ -3,7 +3,6 @@ import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/Quran/model/most_recently_sura_dm.dart';
-import 'package:islami/feature/Quran/model/sura_data_model.dart';
 import 'package:islami/feature/Quran/widgets/list_most_recently.dart';
 import 'package:islami/feature/Quran/widgets/widget_list_view_sura.dart';
 
@@ -43,16 +42,7 @@ class QranScreen extends StatelessWidget {
             SizedBox(height: 10),
             Text("Suras List", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
-            Expanded(
-              child: WidgetListViewSura(
-                sura: SuraDataModel(
-                  numberOfSura: "1",
-                  suraNameAr: "الفاتحه",
-                  suraNameEn: "Al-Fatiha",
-                  verses: " 7 verses",
-                ),
-              ),
-            ),
+            Expanded(child: WidgetListViewSura()),
           ],
         ),
       ),
