@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
+import 'package:islami/core/utils/app_routes.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/Quran/model/sura_data_model.dart';
 
@@ -9,6 +10,7 @@ class WidgetSura extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () => Navigator.push(context, AppRoutes.detailsSuraPage(sura)),
       child: Row(
         children: [
           buildNumberOfSura(),
