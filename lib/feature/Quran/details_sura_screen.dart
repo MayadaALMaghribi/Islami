@@ -64,7 +64,6 @@ class _DetailsSuraScreenState extends State<DetailsSuraScreen> {
   }
 
   String content = "";
-  //asset/files/suras/1.txt
   readSuraContent() async {
     String fileName = "asset/files/suras/${widget.sura.numberOfSura}.txt";
     content = await rootBundle.loadString(fileName);

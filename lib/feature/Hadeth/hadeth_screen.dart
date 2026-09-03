@@ -1,8 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
-import 'package:islami/core/utils/app_colors.dart';
-import 'package:islami/core/utils/app_text_styles.dart';
+import 'package:islami/feature/Hadeth/widget/hadeth_widget.dart';
 
 class HadethScreen extends StatelessWidget {
   const HadethScreen({super.key});
@@ -28,52 +27,83 @@ class HadethScreen extends StatelessWidget {
   }
 
   buildHadethCarousel() => CarouselSlider.builder(
-    itemCount: 100,
+    itemCount: 50,
     itemBuilder: (context, index, realindex) {
-      return buildCarouselWidget();
+      return HadethWidget(index: index);
     },
     options: CarouselOptions(enlargeCenterPage: true, height: double.infinity),
   );
-
-  buildCarouselWidget() => Container(
-    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-    margin: EdgeInsets.only(bottom: 20),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
-      color: AppColors.gold,
-    ),
-    child: Column(
-      children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(AppAssets.imgleftCorner, color: AppColors.black),
-
-                Image.asset(AppAssets.imgRightCorner, color: AppColors.black),
-              ],
-            ),
-            Text("الحديث الثالث العشر", style: AppTextStyles.black24Bold),
-          ],
-        ),
-        Expanded(
-          child: SingleChildScrollView(
-            child: Text(
-              " عن أمـيـر المؤمنـين أبي حـفص عمر بن الخطاب رضي الله عنه ، قال : سمعت رسول الله صلى الله عـليه وسلم يـقـول : ( إنـما الأعـمـال بالنيات وإنـمـا لكـل امـرئ ما نـوى . فمن كـانت هجرته إلى الله ورسولـه فهجرتـه إلى الله ورسـوله ومن كانت هجرته لـدنيا يصـيبها أو امرأة ينكحها فهجرته إلى ما هاجر إليه ).رواه إمام المحد ثين أبـو عـبـد الله محمد بن إسماعـيل بن ابراهـيـم بن المغـيره بن بـرد زبه البخاري الجعـفي،[رقم:1] وابـو الحسـيـن مسلم بن الحجاج بن مـسلم القـشـيري الـنيسـابـوري [رقم :1907] رضي الله عنهما في صحيحيهما اللذين هما أصح الكتب المصنفه.",
-              style: AppTextStyles.black16Bold,
-              textAlign: TextAlign.center,
-              textDirection: TextDirection.rtl,
-            ),
-          ),
-        ),
-        Image.asset(
-          fit: BoxFit.cover,
-          AppAssets.isBottomDecorationImg,
-          color: AppColors.black,
-        ),
-      ],
-    ),
-  );
 }
+
+// import 'dart:developer';
+// import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
+// import 'package:islami/core/utils/app_assets.dart';
+// import 'package:islami/feature/Hadeth/model/hadeth_data_model.dart';
+// import 'package:islami/feature/Hadeth/widget/hadeth_widget.dart';
+
+// class HadethScreen extends StatefulWidget {
+//   const HadethScreen({super.key});
+
+//   @override
+//   State<HadethScreen> createState() => _HadethScreenState();
+// }
+
+// class _HadethScreenState extends State<HadethScreen> {
+//   List<HadethDataModel> hadeeths = [];
+//   String content = "";
+
+//   @override
+//   void initState() {
+//     // TODO: implement initState
+//     super.initState();
+//     readHadethFile();
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       decoration: BoxDecoration(
+//         color: Colors.red,
+//         image: DecorationImage(
+//           image: AssetImage(AppAssets.imgHadethBg),
+//           fit: BoxFit.fill,
+//         ),
+//       ),
+//       child: Column(
+//         crossAxisAlignment: CrossAxisAlignment.stretch,
+//         children: [
+//           Image.asset(AppAssets.islamiLogo),
+//           Expanded(child: buildHadethCarousel()),
+//         ],
+//       ),
+//     );
+//   }
+
+//   buildHadethCarousel() => CarouselSlider.builder(
+//     itemCount: hadeeths.length,
+//     itemBuilder: (context, index, realindex) {
+//       return HadethWidget(
+//         hadethDataModel: HadethDataModel(
+//           title: hadeeths[index].title,
+//           hadeth: hadeeths[index].hadeth,
+//         ),
+//       );
+//     },
+//     options: CarouselOptions(enlargeCenterPage: true, height: double.infinity),
+//   );
+//   readHadethFile() async {
+//     List<String> lines;
+//     for (int i = 1; i <= 50; i++) {
+//       String fileName = "asset/files/hadeeth/h${i}.txt";
+//       content = await rootBundle.loadString(fileName);
+//       lines = content.split("\n");
+//       hadeeths.add(
+//         HadethDataModel(title: lines[0], hadeth: lines.sublist(1).join("\n")),
+//       );
+//     }
+//     print("Hadtheds:$hadeeths");
+//     setState(() {});
+//   }
+// }
