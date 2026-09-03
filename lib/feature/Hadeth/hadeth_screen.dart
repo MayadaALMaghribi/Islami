@@ -29,7 +29,7 @@ class HadethScreen extends StatelessWidget {
   buildHadethCarousel() => CarouselSlider.builder(
     itemCount: 50,
     itemBuilder: (context, index, realindex) {
-      return HadethWidget(index: index);
+      return HadethWidgetCard(index: index);
     },
     options: CarouselOptions(enlargeCenterPage: true, height: double.infinity),
   );

@@ -18,4 +18,5 @@ abstract final class AppAssets {
   static const String imgRightCorner = '$_imagesPath/img_right_corner.png';
   static const String isBottomDecorationImg =
       '$_imagesPath/img_bottom_decoration.png';
+  static const String isHadethCard = '$_imagesPath/HadithCardBackGround.png';
 }

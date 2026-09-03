@@ -5,15 +5,15 @@ import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/Hadeth/model/hadeth_data_model.dart';
 
-class HadethWidget extends StatefulWidget {
-  const HadethWidget({required this.index, super.key});
+class HadethWidgetCard extends StatefulWidget {
+  const HadethWidgetCard({required this.index, super.key});
   final int index;
 
   @override
-  State<HadethWidget> createState() => _HadethWidgetState();
+  State<HadethWidgetCard> createState() => _HadethWidgetCardState();
 }
 
-class _HadethWidgetState extends State<HadethWidget> {
+class _HadethWidgetCardState extends State<HadethWidgetCard> {
   String content = "";
   HadethDataModel hadeeths = HadethDataModel(title: "", hadeth: "");
   @override
@@ -31,6 +31,7 @@ class _HadethWidgetState extends State<HadethWidget> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: AppColors.gold,
+        image: DecorationImage(image: AssetImage(AppAssets.isHadethCard)),
       ),
       child: Column(
         children: [
