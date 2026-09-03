@@ -14,4 +14,8 @@ abstract final class AppAssets {
   static const String imgSuraNumberFrame =
       '$_imagesPath/img_sura_number_frame.png';
   static const String islamiLogo = '$_imagesPath/islami_logo.png';
+  static const String imgleftCorner = '$_imagesPath/img_left_corner.png';
+  static const String imgRightCorner = '$_imagesPath/img_right_corner.png';
+  static const String isBottomDecorationImg =
+      '$_imagesPath/img_bottom_decoration.png';
 }

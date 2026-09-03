@@ -5,6 +5,9 @@ import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/Quran/model/most_recently_sura_dm.dart';
 import 'package:islami/feature/Quran/widgets/list_most_recently.dart';
 import 'package:islami/feature/Quran/widgets/widget_list_view_sura.dart';
+import 'package:islami/feature/Quran/widgets/widget_sura.dart';
+
+import '../../core/utils/app_constants.dart';
 
 class QranScreen extends StatelessWidget {
   const QranScreen({super.key});
@@ -28,7 +31,6 @@ class QranScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text("Most Recently", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
-
             SizedBox(
               height: 150,
               child: ListMostRecently(
@@ -42,7 +44,17 @@ class QranScreen extends StatelessWidget {
             SizedBox(height: 10),
             Text("Suras List", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
-            Expanded(child: WidgetListViewSura()),
+            Expanded(
+              child: ListView.separated(
+                itemBuilder: (_, index) {
+                  return WidgetSura(sura: suras[index]);
+                },
+                separatorBuilder: (_, index) {
+                  return Divider();
+                },
+                itemCount: suras.length,
+              ),
+            ),
           ],
         ),
       ),

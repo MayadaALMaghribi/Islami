@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
+import 'package:islami/core/utils/app_routes.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/Quran/model/sura_data_model.dart';
 
@@ -8,21 +9,24 @@ class WidgetSura extends StatelessWidget {
   final SuraDataModel sura;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        buildNumberOfSura(),
-        SizedBox(width: 24),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(sura.suraNameEn, style: AppTextStyles.white20Bold),
-              Text(sura.verses, style: AppTextStyles.white14Bold),
-            ],
+    return InkWell(
+      onTap: () => Navigator.push(context, AppRoutes.detailsSuraPage(sura)),
+      child: Row(
+        children: [
+          buildNumberOfSura(),
+          SizedBox(width: 24),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(sura.suraNameEn, style: AppTextStyles.white20Bold),
+                Text(sura.verses, style: AppTextStyles.white14Bold),
+              ],
+            ),
           ),
-        ),
-        Text(sura.suraNameAr, style: AppTextStyles.white20Bold),
-      ],
+          Text(sura.suraNameAr, style: AppTextStyles.white20Bold),
+        ],
+      ),
     );
   }
 
