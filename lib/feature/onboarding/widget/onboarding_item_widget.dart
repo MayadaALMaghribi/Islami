@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
-
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/onboarding/model/onboarding_d_m.dart';
 
