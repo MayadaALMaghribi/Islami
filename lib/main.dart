@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_constants.dart';
 import 'package:islami/feature/home/home_screen.dart';
+import 'package:islami/feature/onboarding/onboarding_screen.dart';
+import 'package:islami/feature/onboarding/widget/onboarding_item_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(canvasColor: AppColors.gold),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: OnboardingScreen(),
     );
   }
 }
