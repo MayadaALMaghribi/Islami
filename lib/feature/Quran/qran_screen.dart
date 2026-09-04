@@ -31,16 +31,7 @@ class QranScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text("Most Recently", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
-            SizedBox(
-              height: 150,
-              child: ListMostRecently(
-                mostRecentlySuraDM: MostRecentlySuraDM(
-                  suraNameEn: "Al-Anbiya",
-                  suraNameAr: "الأنبياء",
-                  verses: "112 verses",
-                ),
-              ),
-            ),
+            SizedBox(height: 150, child: ListMostRecently()),
             SizedBox(height: 10),
             Text("Suras List", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
