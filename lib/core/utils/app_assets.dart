@@ -26,4 +26,8 @@ abstract final class AppAssets {
   static const String imgWelcome = '$_imagesPath/onboarding/imgwelcom.png';
   static const String isradioImg = '$_imagesPath/onboarding/radio.png';
   static const String imgHadethCard = '$_imagesPath/onboarding/Frame 3 (1).png';
+
+  static const String sebabackground = '$_imagesPath/sebabackground.png';
+  static const String isSebaMask = '$_imagesPath/sebamask.png';
+  static const String imgSebaBody = '$_imagesPath/sebabody.png';
 }
