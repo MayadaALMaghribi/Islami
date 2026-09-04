@@ -21,11 +21,9 @@ abstract final class AppAssets {
 
   static const String isHadethCard = '$_imagesPath/HadithCardBackGround.png';
 
-
   static const String isBearish = '$_imagesPath/onboarding/bearish.png';
   static const String imgMosque = '$_imagesPath/onboarding/imgmosque.png';
   static const String imgWelcome = '$_imagesPath/onboarding/imgwelcom.png';
   static const String isradioImg = '$_imagesPath/onboarding/radio.png';
-  static const String imgHadethCard = '$_imagesPath/hadeth_card.png';
-
+  static const String imgHadethCard = '$_imagesPath/onboarding/Frame 3 (1).png';
 }

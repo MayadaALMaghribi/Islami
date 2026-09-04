@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
-import 'package:islami/core/utils/app_colors.dart';
+
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/onboarding/model/onboarding_d_m.dart';
 
@@ -15,10 +15,7 @@ class OnboardingItemWidget extends StatelessWidget {
         // mainAxisAlignment: .center,
         children: [
           Image.asset(AppAssets.islamiLogo, alignment: Alignment.topCenter),
-          Expanded(
-            flex: 4,
-            child: Image.asset(onboardingDM.image, color: AppColors.gold),
-          ),
+          Expanded(flex: 4, child: Image.asset(onboardingDM.image)),
           Expanded(
             child: Align(
               alignment: Alignment.center,
