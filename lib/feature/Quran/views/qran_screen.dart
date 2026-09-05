@@ -57,14 +57,14 @@ class QranScreen extends StatelessWidget {
       cursorColor: AppColors.gold,
       style: AppTextStyles.white16Bold,
       decoration: InputDecoration(
-        label: Row(
+        hint: Row(
           children: [
             Image.asset(AppAssets.icQuran, color: AppColors.gold),
             SizedBox(width: 16),
             Text("Sura Name"),
           ],
         ),
-        labelStyle: AppTextStyles.white16Bold,
+        hintStyle: AppTextStyles.white16Bold,
 
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
