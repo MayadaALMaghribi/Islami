@@ -1,4 +1,4 @@
-import 'package:islami/feature/Quran/model/sura_data_model.dart';
+import 'package:islami/feature/Quran/views/model/sura_data_model.dart';
 
 List<String> arabicAuranSuras = [
   "الفاتحه",

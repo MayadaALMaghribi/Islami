@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/Quran/model/sura_data_model.dart';
+import 'package:islami/feature/Quran/views/model/sura_data_model.dart';
 
 class DetailsSuraScreen extends StatefulWidget {
   const DetailsSuraScreen({required this.sura, super.key});
