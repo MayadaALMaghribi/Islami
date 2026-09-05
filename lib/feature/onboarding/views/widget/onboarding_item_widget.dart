@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/onboarding/model/onboarding_d_m.dart';
+import 'package:islami/feature/onboarding/views/view_model/onboarding_d_m.dart';
 
 class OnboardingItemWidget extends StatelessWidget {
   const OnboardingItemWidget({required this.onboardingDM, super.key});

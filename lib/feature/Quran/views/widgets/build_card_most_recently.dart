@@ -3,8 +3,8 @@ import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_routes.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/Quran/model/most_recently_sura_dm.dart';
-import 'package:islami/feature/Quran/model/sura_data_model.dart';
+import 'package:islami/feature/Quran/views/model/most_recently_sura_dm.dart';
+import 'package:islami/feature/Quran/views/model/sura_data_model.dart';
 
 class BuildCardMostRecently extends StatelessWidget {
   const BuildCardMostRecently({

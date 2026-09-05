@@ -3,8 +3,8 @@ import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_routes.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/onboarding/model/onboarding_d_m.dart';
-import 'package:islami/feature/onboarding/widget/onboarding_item_widget.dart';
+import 'package:islami/feature/onboarding/views/view_model/onboarding_d_m.dart';
+import 'package:islami/feature/onboarding/views/widget/onboarding_item_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {

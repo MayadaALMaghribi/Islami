@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
-import 'package:islami/feature/Hadeth/widget/hadeth_widget.dart';
+import 'package:islami/feature/Hadeth/views/widget/hadeth_widget_card.dart';
 
 class HadethScreen extends StatelessWidget {
   const HadethScreen({super.key});

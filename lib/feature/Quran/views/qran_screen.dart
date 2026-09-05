@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/Quran/model/most_recently_sura_dm.dart';
-import 'package:islami/feature/Quran/widgets/list_most_recently.dart';
-import 'package:islami/feature/Quran/widgets/widget_list_view_sura.dart';
-import 'package:islami/feature/Quran/widgets/widget_sura.dart';
+import 'package:islami/feature/Quran/views/model/most_recently_sura_dm.dart';
+import 'package:islami/feature/Quran/views/widgets/list_most_recently.dart';
+import 'package:islami/feature/Quran/views/widgets/widget_list_view_sura.dart';
+import 'package:islami/feature/Quran/views/widgets/widget_sura.dart';
 
-import '../../core/utils/app_constants.dart';
+import '../../../core/utils/app_constants.dart';
 
 class QranScreen extends StatelessWidget {
   const QranScreen({super.key});

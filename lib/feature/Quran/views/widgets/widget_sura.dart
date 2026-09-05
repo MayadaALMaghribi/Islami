@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_routes.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/Quran/model/sura_data_model.dart';
+import 'package:islami/feature/Quran/views/model/sura_data_model.dart';
 
 class WidgetSura extends StatelessWidget {
   const WidgetSura({required this.sura, super.key});

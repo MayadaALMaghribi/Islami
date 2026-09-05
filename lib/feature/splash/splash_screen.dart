@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_routes.dart';
-import 'package:islami/feature/home/home_screen.dart';
+import 'package:islami/feature/home/views/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(Duration(seconds: 3));
 
     if (mounted) {
-      Navigator.pushReplacement(context, AppRoutes.homePage());
+      Navigator.pushReplacement(context, AppRoutes.onBoardingPage());
     } else {
       return;
     }

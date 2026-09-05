@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_constants.dart';
-import 'package:islami/feature/Quran/model/most_recently_sura_dm.dart';
-import 'package:islami/feature/Quran/model/sura_data_model.dart';
-import 'package:islami/feature/Quran/widgets/build_card_most_recently.dart';
+import 'package:islami/feature/Quran/views/model/most_recently_sura_dm.dart';
+import 'package:islami/feature/Quran/views/model/sura_data_model.dart';
+import 'package:islami/feature/Quran/views/widgets/build_card_most_recently.dart';
 
 class ListMostRecently extends StatelessWidget {
   const ListMostRecently({super.key});

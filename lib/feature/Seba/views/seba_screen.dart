@@ -13,10 +13,10 @@ class SebaScreen extends StatefulWidget {
 class _SebaScreenState extends State<SebaScreen>
     with SingleTickerProviderStateMixin {
   final List<Azkar> azkarModelList = [
-    Azkar(count: 33, turn: 33, zaker: "الحمدالله"),
-    Azkar(count: 33, turn: 33, zaker: "الله اكبر"),
-    Azkar(count: 33, turn: 33, zaker: "سبحان الله"),
-    Azkar(count: 33, turn: 33, zaker: "استغفر الله"),
+    Azkar(count: 33, zaker: "الحمدالله"),
+    Azkar(count: 33, zaker: "الله اكبر"),
+    Azkar(count: 33, zaker: "سبحان الله"),
+    Azkar(count: 33, zaker: "استغفر الله"),
   ];
 
   int count = 0;
@@ -79,7 +79,7 @@ class _SebaScreenState extends State<SebaScreen>
                   alignment: Alignment.center,
                   children: [
                     Positioned(
-                      top: 40,
+                      top: 8,
                       right: 140,
                       child: Image.asset(
                         AppAssets.isSebaMask,

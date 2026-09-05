@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
-import 'package:islami/feature/Hadeth/model/hadeth_data_model.dart';
+import 'package:islami/feature/Hadeth/views/view_model/hadeth_data_model.dart';
 
 class HadethWidgetCard extends StatefulWidget {
   const HadethWidgetCard({required this.index, super.key});
