@@ -9,24 +9,21 @@ class WidgetSura extends StatelessWidget {
   final SuraDataModel sura;
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => Navigator.push(context, AppRoutes.detailsSuraPage(sura)),
-      child: Row(
-        children: [
-          buildNumberOfSura(),
-          SizedBox(width: 24),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(sura.suraNameEn, style: AppTextStyles.white20Bold),
-                Text(sura.verses, style: AppTextStyles.white14Bold),
-              ],
-            ),
+    return Row(
+      children: [
+        buildNumberOfSura(),
+        SizedBox(width: 24),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(sura.suraNameEn, style: AppTextStyles.white20Bold),
+              Text(sura.verses, style: AppTextStyles.white14Bold),
+            ],
           ),
-          Text(sura.suraNameAr, style: AppTextStyles.white20Bold),
-        ],
-      ),
+        ),
+        Text(sura.suraNameAr, style: AppTextStyles.white20Bold),
+      ],
     );
   }
 
@@ -43,3 +40,7 @@ class WidgetSura extends StatelessWidget {
     );
   }
 }
+  // onTap: () { 
+
+      //   Navigator.push(context, AppRoutes.detailsSuraPage(sura));
+      // },

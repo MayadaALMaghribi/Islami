@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
+import 'package:islami/feature/home/views/home_screen.dart';
 import 'package:islami/feature/splash/splash_screen.dart';
 
 void main() {

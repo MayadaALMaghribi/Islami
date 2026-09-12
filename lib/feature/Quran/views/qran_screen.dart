@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:islami/core/cache/cache_function.dart';
 import 'package:islami/core/utils/app_assets.dart';
 import 'package:islami/core/utils/app_colors.dart';
+import 'package:islami/core/utils/app_routes.dart';
 import 'package:islami/core/utils/app_text_styles.dart';
 import 'package:islami/feature/Quran/views/model/sura_data_model.dart';
 import 'package:islami/feature/Quran/views/widgets/list_most_recently.dart';
 import 'package:islami/feature/Quran/views/widgets/widget_sura.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../core/utils/app_constants.dart';
 
 class QranScreen extends StatefulWidget {
@@ -17,11 +20,13 @@ class QranScreen extends StatefulWidget {
 class _QranScreenState extends State<QranScreen> {
   List<SuraDataModel> suraSearch = [];
   TextEditingController _controller = TextEditingController();
+  GlobalKey<ListMostRecentlyState> _mostRecently = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
+          alignment: Alignment.center,
           image: AssetImage(AppAssets.imgQuranBackground),
           fit: BoxFit.cover,
         ),
@@ -29,23 +34,37 @@ class _QranScreenState extends State<QranScreen> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(AppAssets.islamiLogo),
+            Center(child: Image.asset(AppAssets.islamiLogo)),
             buildSearchQuran(),
             SizedBox(height: 20),
             Text("Most Recently", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
-            SizedBox(height: 150, child: ListMostRecently()),
+            SizedBox(height: 150, child: ListMostRecently(key: _mostRecently)),
             SizedBox(height: 10),
             Text("Suras List", style: AppTextStyles.white16Bold),
             SizedBox(height: 10),
             Expanded(
               child: ListView.separated(
                 itemBuilder: (_, index) {
-                  return WidgetSura(
-                    sura: suraSearch.isEmpty && _controller.text.trim().isEmpty
-                        ? suras[index]
-                        : suraSearch[index],
+                  return InkWell(
+                    onTap: () {
+                      saveSuraPrefs(sura: suras[index]);
+                      _mostRecently.currentState?.getAllSuras();
+                      Navigator.push(
+                        context,
+                        AppRoutes.detailsSuraPage(suras[index]),
+                      ).then((value) {
+                        _mostRecently.currentState?.getAllSuras();
+                      });
+                    },
+                    child: WidgetSura(
+                      sura:
+                          suraSearch.isEmpty && _controller.text.trim().isEmpty
+                          ? suras[index]
+                          : suraSearch[index],
+                    ),
                   );
                 },
                 separatorBuilder: (_, index) {
@@ -109,6 +128,16 @@ class _QranScreenState extends State<QranScreen> {
     }).toList();
   }
 }
+
+// saveSuraPrefs({required SuraDataModel sura}) async {
+//   final SharedPreferences prefs = await SharedPreferences.getInstance();
+//   List<String> surasMostRecently =
+//       prefs.getStringList(AppConstants.mostRecently) ?? [];
+//   surasMostRecently.add(sura.numberOfSura);
+//   surasMostRecently = surasMostRecently.toSet().toList();
+//   await prefs.setStringList(AppConstants.mostRecently, surasMostRecently);
+// }
+
 // // import 'package:flutter/material.dart';
 // import 'package:islami/core/utils/app_assets.dart';
 // import 'package:islami/core/utils/app_colors.dart';

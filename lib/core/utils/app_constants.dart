@@ -357,6 +357,7 @@ List<SuraDataModel> suras = List.generate(114, (index) {
     verses: AyaNumber[index],
   );
 });
+
 // fileSurasList() {
 //   for (int i = 0; i < arabicAuranSuras.length; i++) {
 //     suras.add(
@@ -369,3 +370,6 @@ List<SuraDataModel> suras = List.generate(114, (index) {
 //     );
 //   }
 // }
+abstract final class AppConstants {
+  static const mostRecently = "mostRecently";
+}
