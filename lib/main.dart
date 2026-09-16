@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
-import 'package:islami/feature/home/views/home_screen.dart';
-import 'package:islami/feature/splash/splash_screen.dart';
+import 'package:islami/feature/splash/splash_native_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(canvasColor: AppColors.gold),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: SplashNativeScreen(),
     );
   }
 }
