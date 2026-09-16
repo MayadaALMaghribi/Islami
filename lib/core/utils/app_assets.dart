@@ -30,4 +30,6 @@ abstract final class AppAssets {
   static const String sebabackground = '$_imagesPath/sebabackground.png';
   static const String isSebaMask = '$_imagesPath/sebamask.png';
   static const String imgSebaBody = '$_imagesPath/sebabody.png';
+  static const String imgSplashLogo = '$_imagesPath/imgsplash.png';
+  static const String imgBranding = '$_imagesPath/img_branding.png';
 }
